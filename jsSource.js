@@ -7,6 +7,7 @@ var Scores = [0, 0]; // my Score - Opponent score
 
 var x = Datagenerator();
 var t = 0;
+var downloadFlag = 1;
 var flag1 = 0;
 var flag2 = 0;
 var flag3 = 0;
@@ -14,9 +15,10 @@ var prevval = ['', '', '', ''];
 function play(id) {
     // Ask questions at prespecified times:
 
-    if (t == 81) {
+    if (t == 81 && downloadFlag == 1) {
         download("NewData", JSON.stringify(subject));
         alert("Please wait and do not close task");
+		downloadFlag = 0;
         return;
     }
 
