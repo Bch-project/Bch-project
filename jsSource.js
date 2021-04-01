@@ -15,10 +15,9 @@ var prevval = ['', '', '', ''];
 function play(id) {
     // Ask questions at prespecified times:
 
-    if (t == 81 && downloadFlag == 1) {
+    if (t == 81) {
         download("NewData", JSON.stringify(subject));
         alert("Please wait and do not close task");
-		downloadFlag = 0;
         return;
     }
 
